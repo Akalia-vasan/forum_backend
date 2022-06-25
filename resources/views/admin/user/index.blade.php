@@ -9,7 +9,7 @@
             <a class="btn dropdown-toggle" href="#" role="button" id="breadcrumb-dropdown-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
 
             <div class="dropdown-menu" aria-labelledby="breadcrumb-dropdown-1">
-            <a class="dropdown-item" href="{{ route('admin.auth.user.create') }}">Create User</a>
+            <a class="dropdown-item" href="{{ route('auth.user.create') }}">Create User</a>
             </div>
         </div><!--dropdown-->
 
@@ -38,7 +38,7 @@
         <div class="row mt-4">
             <div class="col">
                 <div class="table-responsive" style="overflow-y:visible;overflow-x:visible;">
-                    <table class="table" id="users-table" data-ajax_url="{{ route("admin.auth.user.get") }}">
+                    <table class="table" id="users-table" data-ajax_url="{{ route("auth.user.get") }}">
                         <thead>
                             <tr>
                                 <th>Name</th>

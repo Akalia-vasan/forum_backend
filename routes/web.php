@@ -5,11 +5,8 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\UserTableController;
 use App\Http\Controllers\Role\RoleController;
 use App\Http\Controllers\Role\RoleTableController;
-use App\Http\Controllers\Company\CompanyController;
-use App\Http\Controllers\Company\CompanyTableController;
-use App\Http\Controllers\Employee\EmployeeController;
-use App\Http\Controllers\Employee\EmployeeTableController;
-use App\Http\Controllers\AccountController;
+use App\Http\Controllers\Post\PostController;
+use App\Http\Controllers\Post\PostTableController;
 use App\Http\Controllers\Auth\VerificationController;
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group([
     'prefix' => 'auth',
-    'as' => 'admin.auth.',
+    'as' => 'auth.',
     'namespace' => 'Auth',
     'middleware' => 'auth',
 ], function () {
@@ -74,6 +71,24 @@ Route::group([
             Route::patch('/edit', [RoleController::class, 'update'])->name('role.update');
             Route::delete('/delete', [RoleController::class, 'destory'])->name('role.destroy');
             Route::get('/show', [RoleController::class, 'show'])->name('role.show');
+
+        });
+    });
+
+    Route::group(['namespace' => 'Post', 'prefix' => 'post'], function () {
+        // For DataTables
+        Route::post('/get', [PostTableController::class, 'invoke'])->name('post.get');
+
+
+        // Role CRUD
+        Route::get('/', [PostController::class, 'index'])->name('post.index');
+        Route::get('/create', [PostController::class, 'create'])->name('post.create');
+        Route::post('/', [PostController::class, 'store'])->name('post.store');
+        Route::group(['prefix' => '{post}'], function () {
+            Route::get('/edit', [PostController::class, 'edit'])->name('post.edit');
+            Route::patch('/edit', [PostController::class, 'update'])->name('post.update');
+            Route::delete('/delete', [PostController::class, 'destory'])->name('post.destroy');
+            Route::get('/show', [PostController::class, 'show'])->name('post.show');
 
         });
     });

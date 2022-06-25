@@ -9,7 +9,7 @@
             <a class="btn dropdown-toggle" href="#" role="button" id="breadcrumb-dropdown-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Role</a>
 
             <div class="dropdown-menu" aria-labelledby="breadcrumb-dropdown-1">
-            <a class="dropdown-item" href="{{ route('admin.auth.role.create') }}">Create Role</a>
+            <a class="dropdown-item" href="{{ route('auth.role.create') }}">Create Role</a>
             </div>
         </div><!--dropdown-->
         <!--<a class="btn" href="#">Static Link</a>-->
@@ -19,14 +19,14 @@
 @endsection
 
 @section('content')
-{{ Form::open(['route' => 'admin.auth.role.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-role']) }}
+{{ Form::open(['route' => 'auth.role.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-role']) }}
 <div class="card">
     <div class="card-body">
         <div class="row">
             <div class="col-sm-5">
                 <h4 class="card-title mb-0">
-                    Roles Management
-                    <small class="text-muted">Role Create</small>
+                    My Posts
+                    <small class="text-muted">Post Create</small>
                 </h4>
             </div>
             <!--col-->

@@ -43,17 +43,17 @@ class RoleTableController extends Controller
             ->addColumn('actions', function ($role) {
                 if($role->name == 'Admin')
                 {
-                    return '</a><a class="btn btn-secondary btn-sm" href="'.route('admin.auth.role.show', $role).'">
+                    return '</a><a class="btn btn-secondary btn-sm" href="'.route('auth.role.show', $role).'">
                     <i class="fa fa-eye" data-toggle="tooltip">
                     </i>
                     </a>';
                 }
                 else
                 {
-                    return '<a href="'.route('admin.auth.role.edit', $role).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a class="btn btn-secondary btn-sm" href="'.route('admin.auth.user.show', $role).'">
+                    return '<a href="'.route('auth.role.edit', $role).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a class="btn btn-secondary btn-sm" href="'.route('auth.role.show', $role).'">
                     <i class="fa fa-eye" data-toggle="tooltip">
                     </i>
-                    </a><a data-method="delete" href="'.route('admin.auth.role.destroy', $role).'" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>';
+                    </a><a data-method="delete" href="'.route('auth.role.destroy', $role).'" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>';
                 }
             })
             ->make(true);

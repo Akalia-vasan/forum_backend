@@ -5,8 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PassportAuthController;
 use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\API\CompanyController;
-use App\Http\Controllers\API\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes

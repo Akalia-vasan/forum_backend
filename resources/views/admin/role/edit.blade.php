@@ -9,17 +9,16 @@
             <a class="btn dropdown-toggle" href="#" role="button" id="breadcrumb-dropdown-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Role</a>
 
             <div class="dropdown-menu" aria-labelledby="breadcrumb-dropdown-1">
-            <a class="dropdown-item" href="{{ route('admin.auth.role.create') }}">Edit Role</a>
+            <a class="dropdown-item" href="{{ route('auth.role.create') }}">Edit Role</a>
             </div>
         </div><!--dropdown-->
         <!--<a class="btn" href="#">Static Link</a>-->
     </div><!--btn-group-->
 </li>
-@e
 @endsection
 
 @section('content')
-{{ Form::model($role, ['route' => ['admin.auth.role.update', $role], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-role']) }}
+{{ Form::model($role, ['route' => ['auth.role.update', $role], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-role']) }}
 <div class="card">
     <div class="card-body">
         <div class="row">

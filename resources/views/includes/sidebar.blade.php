@@ -28,7 +28,7 @@
                             <li class="nav-item">
                                 <a class="nav-link {{
                         active_class(Route::is('auth/user'))
-                    }}" href="{{ route('admin.auth.user.index') }}">
+                    }}" href="{{ route('auth.user.index') }}">
                                     Users Management
 
                                 </a>
@@ -36,7 +36,7 @@
                             <li class="nav-item">
                                 <a class="nav-link {{
                         active_class(Route::is('auth/role'))
-                    }}" href="{{ route('admin.auth.role.index') }}">
+                    }}" href="{{ route('auth.role.index') }}">
                                     Roles Management
                                 </a>
                             </li>
@@ -51,22 +51,13 @@
                 @endif    
             @endauth
             <li class="divider"></li>
-            @if (auth()->user()->isRole())
             <li class="nav-item">
                 <a class="nav-link {{
-        active_class(Route::is('auth/company'))
-    }}" href="{{ route('admin.auth.company.index') }}">
-                    Company Management
+        active_class(Route::is('auth/posts'))
+    }}" href="{{ route('auth.post.index') }}">
+                    My Posts
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{
-        active_class(Route::is('auth/employee'))
-    }}" href="{{ route('admin.auth.employee.index') }}">
-                    Employee Management
-                </a>
-            </li>
-            @endif
         </ul>    
     </nav>
 

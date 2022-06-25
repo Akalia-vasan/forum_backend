@@ -48,17 +48,17 @@ class UserTableController extends Controller
                 
                 if($user->getRoleNames()->first() == 'Admin')
                 {
-                    return '<a href="'.route('admin.auth.user.edit', $user).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a class="btn btn-secondary btn-sm" href="'.route('admin.auth.user.show', $user).'">
+                    return '<a href="'.route('auth.user.edit', $user).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a class="btn btn-secondary btn-sm" href="'.route('auth.user.show', $user).'">
                     <i class="fa fa-eye" data-toggle="tooltip">
                     </i>
                     </a>';
                 }
                 else
                 {
-                    return '<a href="'.route('admin.auth.user.edit', $user).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a class="btn btn-secondary btn-sm" href="'.route('admin.auth.user.show', $user).'">
+                    return '<a href="'.route('auth.user.edit', $user).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a class="btn btn-secondary btn-sm" href="'.route('auth.user.show', $user).'">
                     <i class="fa fa-eye" data-toggle="tooltip">
                     </i>
-                    </a><a data-method="delete" href="'.route('admin.auth.user.destroy', $user).'" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>';
+                    </a><a data-method="delete" href="'.route('auth.user.destroy', $user).'" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>';
                 }
                 
             })

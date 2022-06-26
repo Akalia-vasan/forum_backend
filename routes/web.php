@@ -104,7 +104,7 @@ Route::group([
         // Aproval CRUD
         Route::get('/', [PostApprovalController::class, 'index'])->name('post.approval.index');
         Route::group(['prefix' => '{post}'], function () {
-            Route::patch('/edit', [PostApprovalController::class, 'update'])->name('post.approval.update');
+            Route::post('/edit', [PostApprovalController::class, 'update'])->name('post.approval.update');
             Route::get('/show', [PostApprovalController::class, 'show'])->name('post.approval.show');
 
         });

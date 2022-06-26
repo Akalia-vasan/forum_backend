@@ -48,23 +48,26 @@
                             </li> -->
                         </ul>
                     </li>
+                @endif
+                <li class="divider"></li>
+                <li class="nav-item">
+                    <a class="nav-link {{
+            active_class(Route::is('auth/posts'))
+        }}" href="{{ route('auth.post.index') }}">
+                        My Posts
+                    </a>
+                </li>
+                @if (auth()->user()->isAdmin())
+                <li class="nav-item">
+                    <a class="nav-link {{
+            active_class(Route::is('auth/post-approval'))
+        }}" href="{{ route('auth.post.approval.index') }}">
+                        Post Approvals
+                    </a>
+                </li>
                 @endif    
             @endauth
-            <li class="divider"></li>
-            <li class="nav-item">
-                <a class="nav-link {{
-        active_class(Route::is('auth/posts'))
-    }}" href="{{ route('auth.post.index') }}">
-                    My Posts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{
-        active_class(Route::is('auth/post-approval'))
-    }}" href="{{ route('auth.post.approval.index') }}">
-                    Post Approvals
-                </a>
-            </li>
+            
         </ul>    
     </nav>
 

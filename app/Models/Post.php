@@ -13,12 +13,12 @@ class Post extends Model
         'content','author_id', 'status'
     ];
 
-    public function comments(): HasMany
+    public function comments()
     {
         return $this->hasMany(Comment::class);
     }
 
-    public function user(): BelongsTo
+    public function user()
     {
         return $this->belongsTo(User::class, 'author_id');
     }

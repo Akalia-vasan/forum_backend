@@ -62,7 +62,6 @@
     {!! script(asset('js/backend.js')) !!}
     <script src="{{ asset('/js/tinymce/tinymce.min.js')}}"></script>
     {!! script(asset('js/backend/common.js')) !!}
-
     @isset($js)
     
     @foreach($js as $j)

@@ -36,6 +36,7 @@
                             <tr>
                                 <th>Content</th>
                                 <th>Status</th>
+                                <th>Reason</th>
                                 <th>Created At</th>
                                 <th>Actions</th>
                             </tr>

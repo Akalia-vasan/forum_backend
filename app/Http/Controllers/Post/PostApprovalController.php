@@ -10,6 +10,7 @@ use DB;
 use Carbon\Carbon;
 use App\Http\Responses\ViewResponse;
 use Illuminate\Support\Facades\View;
+use App\Models\Post;
 class PostApprovalController extends Controller
 {
 
@@ -29,6 +30,20 @@ class PostApprovalController extends Controller
     }
     public function show(Post $post)
     {
+        $status = '';
+        if($post->status == 1)
+        {
+            $status = 'Open';
+        }
+        if($post->status == 2)
+        {
+            $status = 'Approved';
+        }
+        if($post->status == 3)
+        {
+            $status = 'Rejected';
+        }
+        $post->setAttribute('flag', $status);
         return view('admin.approval.show')->withPost($post);
     }
 

@@ -45,15 +45,18 @@ class ApprovalTableController extends Controller
                 }
                 if($post->status == 3)
                 {
-                    $status = 'Reject';
+                    $status = 'Rejected';
                 }
                 return $status; 
+            }) 
+            ->addColumn('reason', function ($post) {
+                return isset($post->reason) ? $post->reason : ''; 
             }) 
             ->addColumn('created_at', function ($post) {
                 return Carbon::parse($post->created_at)->toDateString();
             })  
             ->addColumn('actions', function ($post) {
-                return '<a href="'.route('auth.post.edit', $post).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>';
+                return '<a href="'.route('auth.post.approval.show', $post).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>';
             })
             ->make(true);
     }

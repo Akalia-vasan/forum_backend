@@ -24,6 +24,7 @@ class PostApprovalRepository extends BaseRepository
                 'posts.id',
                 'posts.content',
                 'posts.status',
+                'posts.reason',
                 'posts.created_at',
                 'posts.updated_at',
             ]);

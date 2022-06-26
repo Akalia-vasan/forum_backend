@@ -23,6 +23,7 @@
 
                         { data: 'content', name: 'content' },
                         { data: 'status', name: 'status' },
+                        { data: 'reason', name: 'reason' },
                         { data: 'created_at', name: 'created_at' },
                         { data: 'actions', name: 'actions', searchable: false, sortable: false }
 

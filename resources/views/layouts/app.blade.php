@@ -64,6 +64,7 @@
     {!! script(asset('js/backend/common.js')) !!}
 
     @isset($js)
+    
     @foreach($js as $j)
     {!! script(asset('js/backend/'. $j. '.js')) !!}
     @endforeach

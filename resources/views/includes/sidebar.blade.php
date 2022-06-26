@@ -58,6 +58,13 @@
                     My Posts
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{
+        active_class(Route::is('auth/post-approval'))
+    }}" href="{{ route('auth.post.approval.index') }}">
+                    Post Approvals
+                </a>
+            </li>
         </ul>    
     </nav>
 

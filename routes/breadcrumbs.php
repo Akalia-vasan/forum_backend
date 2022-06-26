@@ -57,4 +57,12 @@ Breadcrumbs::for('auth.post.edit', function ($trail, $id) {
     $trail->push('Post Edit', route('auth.post.edit', $id));
 });
 
+Breadcrumbs::for('auth.post.approval.index', function ($trail) {
+    $trail->push(__('Post Approval Management'), route('auth.post.approval.index'));
+});
 
+
+Breadcrumbs::for('auth.post.approval.show', function ($trail, $id) {
+    $trail->parent('auth.post.approval.index');
+    $trail->push('Post Approval View', route('auth.post.approval.show', $id));
+});

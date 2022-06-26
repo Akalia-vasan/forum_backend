@@ -7,6 +7,8 @@ use App\Http\Controllers\Role\RoleController;
 use App\Http\Controllers\Role\RoleTableController;
 use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Post\PostTableController;
+use App\Http\Controllers\Post\PostApprovalController;
+use App\Http\Controllers\Post\ApprovalTableController;
 use App\Http\Controllers\Auth\VerificationController;
 /*
 |--------------------------------------------------------------------------
@@ -75,7 +77,7 @@ Route::group([
         });
     });
 
-    Route::group(['namespace' => 'Post', 'prefix' => 'post'], function () {
+    Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
         // For DataTables
         Route::post('/get', [PostTableController::class, 'invoke'])->name('post.get');
 
@@ -89,6 +91,21 @@ Route::group([
             Route::patch('/edit', [PostController::class, 'update'])->name('post.update');
             Route::delete('/delete', [PostController::class, 'destory'])->name('post.destroy');
             Route::get('/show', [PostController::class, 'show'])->name('post.show');
+
+        });
+    });
+
+
+    Route::group(['namespace' => 'Post', 'prefix' => 'post-approval'], function () {
+        // For DataTables
+        Route::post('/get', [ApprovalTableController::class, 'invoke'])->name('post.approval.get');
+
+
+        // Aproval CRUD
+        Route::get('/', [PostApprovalController::class, 'index'])->name('post.approval.index');
+        Route::group(['prefix' => '{post}'], function () {
+            Route::patch('/edit', [PostApprovalController::class, 'update'])->name('post.approval.update');
+            Route::get('/show', [PostApprovalController::class, 'show'])->name('post.approval.show');
 
         });
     });

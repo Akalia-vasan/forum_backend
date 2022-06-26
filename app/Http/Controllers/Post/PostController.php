@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use Illuminate\Support\Facades\Mail;
+
 class PostController extends Controller
 {
     protected $repository;
@@ -48,7 +50,18 @@ class PostController extends Controller
             'author_id' => auth()->user()->id,
             'status' => $status
             ]);
-    
+        if($post->status == '1')
+        {
+            $data = [
+                'content' => $post->content
+            ];
+            Mail::send('emails.post-notify', $data, function ($message) use ($data) {
+                $message->from(config('mail.from.address'), 'Forum');
+                $message->subject("Approval Requested");
+                $message->to(['admin@gmail.net']);
+            });
+        }    
+        
         return redirect()->route('auth.post.index')
                         ->with('success','Post created successfully');
     }

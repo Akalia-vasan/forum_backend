@@ -66,3 +66,7 @@ Breadcrumbs::for('auth.post.approval.show', function ($trail, $id) {
     $trail->parent('auth.post.approval.index');
     $trail->push('Post Approval View', route('auth.post.approval.show', $id));
 });
+Breadcrumbs::for('auth.post.qa', function ($trail, $id) {
+    $trail->parent('home');
+    $trail->push('Comments', route('auth.post.qa', $id));
+});

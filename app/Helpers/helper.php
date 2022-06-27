@@ -2,6 +2,14 @@
 use App\Helpers\HtmlHelper;
 use App\Helpers\TimezoneHelper;
 
+if (!function_exists('carbon')) {
+    function carbon($time = null, $tz = null)
+    {
+        return new \Carbon\Carbon($time, $tz);
+    }
+}
+
+
 if (! function_exists('timezone')) {
     /**
      * Access the timezone helper.

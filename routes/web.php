@@ -103,12 +103,18 @@ Route::group([
 
         // Aproval CRUD
         Route::get('/', [PostApprovalController::class, 'index'])->name('post.approval.index');
+        Route::post('/', [PostApprovalController::class, 'reply'])->name('post.reply');
         Route::group(['prefix' => '{post}'], function () {
             Route::post('/edit', [PostApprovalController::class, 'update'])->name('post.approval.update');
             Route::get('/show', [PostApprovalController::class, 'show'])->name('post.approval.show');
+            
 
         });
     });
-
-    
+    Route::post('/filter', [PostApprovalController::class, 'filter'])->name('post.search');
+    Route::get('home/{post}/view', [PostApprovalController::class, 'askQua'])->name('post.qa');
+    Route::post('/comment', [PostApprovalController::class, 'comment'])->name('comments.add');
+    Route::get('/view-more', [PostApprovalController::class, 'view'])->name('comments.view');
+    Route::post('/comment-update', [PostApprovalController::class, 'updateComment'])->name('comments.update');
+    Route::post('/comment-delete', [PostApprovalController::class, 'destroy'])->name('comments.delete');
 });

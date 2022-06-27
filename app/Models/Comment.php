@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Comment extends Model
 {
     use HasFactory, SoftDeletes;
-
-    public function parent(): BelongsTo
+    protected $fillable = [
+        'content','author_id', 'post_id', 'parent_id'
+    ];
+    public function parent()
     {
         return $this->belongsTo(Post::class, 'post_id');
     }
 
-    public function user(): BelongsTo
+    public function user()
     {
         return $this->belongsTo(User::class, 'author_id');
     }

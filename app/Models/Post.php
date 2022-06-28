@@ -10,7 +10,7 @@ class Post extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'content','author_id', 'status'
+        'content','author_id', 'status', 'reason'
     ];
 
     public function comments()

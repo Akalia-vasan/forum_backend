@@ -2,55 +2,40 @@
 
 namespace App\Exceptions;
 
-use Exception;
-use Illuminate\Auth\AuthenticationException;
-use App\Project\Frontend\Repo\Vehicle\EloquentVehicle;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    /**
+     * A list of the exception types that are not reported.
+     *
+     * @var array
+     */
     protected $dontReport = [
-        \Illuminate\Auth\AuthenticationException::class,
-        \Illuminate\Auth\Access\AuthorizationException::class,
-        \Symfony\Component\HttpKernel\Exception\HttpException::class,
-        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
-        \Illuminate\Session\TokenMismatchException::class,
-        \Illuminate\Validation\ValidationException::class,
+        //
     ];
 
     /**
-     * Report or log an exception.
+     * A list of the inputs that are never flashed for validation exceptions.
      *
-     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-     *
-     * @param  \Exception  $exception
-     * @return void
+     * @var array
      */
-    public function report(Exception $exception)
-    {
-        parent::report($exception);
-    }
+    protected $dontFlash = [
+        'current_password',
+        'password',
+        'password_confirmation',
+    ];
 
     /**
-     * Render an exception into an HTTP response.
+     * Register the exception handling callbacks for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function render($request, Exception $exception)
+    public function register()
     {
-        if($exception instanceof CustomException) {
-            return $this->showCustomErrorPage();
-        }
-
-        return parent::render($request, $exception);
-    }
-
-    protected function showCustomErrorPage()
-    {
-        $recentlyAdded = app(EloquentVehicle::class)->fetchLatestVehicles(0, 12);
-
-        return view()->make('errors.404Custom')->with('recentlyAdded', $recentlyAdded);
+        $this->reportable(function (Throwable $e) {
+            //
+        });
     }
 }

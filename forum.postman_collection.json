@@ -1,0 +1,784 @@
+{
+	"info": {
+		"_postman_id": "87809182-124b-4906-b074-6f45fc8a16c5",
+		"name": "forum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get All Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/task/public/api/role",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWRjNmZiNDBmMjA0MzE2MDIyMWFkNDc4YzkzZGZmY2Q2MjI0YTdlYzZhMjJiZmI5NWVhNmNhZjc5Mjk1ZGU5YTI4MzcyOTgwNDYzYWZkZjEiLCJpYXQiOjE2NTI2MjMzODUuMTgzMjY0LCJuYmYiOjE2NTI2MjMzODUuMTgzMjg5LCJleHAiOjE2ODQxNTkzODUuMDEyMDM2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.B3TH7H5basZZSdcXn59N5q_-SdrdKSvwYeDUWRjuDrcR69PUPxyIU6QJw8XSuP5WP3hLDsgOM8nkWSaYlmPC0pxCC6TaQWeTj6ueNUqvXK3S8_BJ2VhDl9Byc2A0J5HsOn2RHeDv8sMx8rWVPDye685NsbPPLtMpfvt4ZhmhoBNRhOgoAzY9iFVkobML3oDIvgAsOyOx-JmsjTdYpkxFCgIyXxCdtIqvql-N7wsj6Xi4ey_e-iF9cOSqkn0OBwjL8IUPjyavklhfNTBDTVXD3-3KNYgpKUhklf47nbsBb5N0EUMaua0-EAkR5ZYQRvCQZ5ma44GRnlqS5MU6lUaQ89ojLvNaMldsdjOpt6tWR4AK2Y8zXlmI-Aa-7lswzdiQnvqjMxjLOJzKIxbSxbZtE9SDoB_Cr5vtzG7FcJGZ3DRWSI9_VdzhhSoCfuR51sl20nmogNYMlVWcqN-kvdt9KIUspOjM-hVJMeTNSglLcokyld5fw40V3-K431Q-VVvjIiVtzuuCZr6640UinpH9F7DsDSF3bT1zXH0b5Rdz-Zul_1WhYlTGMN2Lo2kkK8O_uVqLoRs2CACeMIAkhJg9a3I6sso1GCOb7uN2z9uoXvnPJ7b49NLo_dYQZSSTWjIMLuy_PKoX-WGUO_kQOforRs5HXEoGrnxEG9jhlujTeXo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Staff",
+									"type": "text"
+								},
+								{
+									"key": "permissions[1]",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "permissions[2]",
+									"value": "18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/role/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"role",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Roles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWRjNmZiNDBmMjA0MzE2MDIyMWFkNDc4YzkzZGZmY2Q2MjI0YTdlYzZhMjJiZmI5NWVhNmNhZjc5Mjk1ZGU5YTI4MzcyOTgwNDYzYWZkZjEiLCJpYXQiOjE2NTI2MjMzODUuMTgzMjY0LCJuYmYiOjE2NTI2MjMzODUuMTgzMjg5LCJleHAiOjE2ODQxNTkzODUuMDEyMDM2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.B3TH7H5basZZSdcXn59N5q_-SdrdKSvwYeDUWRjuDrcR69PUPxyIU6QJw8XSuP5WP3hLDsgOM8nkWSaYlmPC0pxCC6TaQWeTj6ueNUqvXK3S8_BJ2VhDl9Byc2A0J5HsOn2RHeDv8sMx8rWVPDye685NsbPPLtMpfvt4ZhmhoBNRhOgoAzY9iFVkobML3oDIvgAsOyOx-JmsjTdYpkxFCgIyXxCdtIqvql-N7wsj6Xi4ey_e-iF9cOSqkn0OBwjL8IUPjyavklhfNTBDTVXD3-3KNYgpKUhklf47nbsBb5N0EUMaua0-EAkR5ZYQRvCQZ5ma44GRnlqS5MU6lUaQ89ojLvNaMldsdjOpt6tWR4AK2Y8zXlmI-Aa-7lswzdiQnvqjMxjLOJzKIxbSxbZtE9SDoB_Cr5vtzG7FcJGZ3DRWSI9_VdzhhSoCfuR51sl20nmogNYMlVWcqN-kvdt9KIUspOjM-hVJMeTNSglLcokyld5fw40V3-K431Q-VVvjIiVtzuuCZr6640UinpH9F7DsDSF3bT1zXH0b5Rdz-Zul_1WhYlTGMN2Lo2kkK8O_uVqLoRs2CACeMIAkhJg9a3I6sso1GCOb7uN2z9uoXvnPJ7b49NLo_dYQZSSTWjIMLuy_PKoX-WGUO_kQOforRs5HXEoGrnxEG9jhlujTeXo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Staff",
+									"type": "text"
+								},
+								{
+									"key": "permissions[1]",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/role/11/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"role",
+								"11",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role Api",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWRjNmZiNDBmMjA0MzE2MDIyMWFkNDc4YzkzZGZmY2Q2MjI0YTdlYzZhMjJiZmI5NWVhNmNhZjc5Mjk1ZGU5YTI4MzcyOTgwNDYzYWZkZjEiLCJpYXQiOjE2NTI2MjMzODUuMTgzMjY0LCJuYmYiOjE2NTI2MjMzODUuMTgzMjg5LCJleHAiOjE2ODQxNTkzODUuMDEyMDM2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.B3TH7H5basZZSdcXn59N5q_-SdrdKSvwYeDUWRjuDrcR69PUPxyIU6QJw8XSuP5WP3hLDsgOM8nkWSaYlmPC0pxCC6TaQWeTj6ueNUqvXK3S8_BJ2VhDl9Byc2A0J5HsOn2RHeDv8sMx8rWVPDye685NsbPPLtMpfvt4ZhmhoBNRhOgoAzY9iFVkobML3oDIvgAsOyOx-JmsjTdYpkxFCgIyXxCdtIqvql-N7wsj6Xi4ey_e-iF9cOSqkn0OBwjL8IUPjyavklhfNTBDTVXD3-3KNYgpKUhklf47nbsBb5N0EUMaua0-EAkR5ZYQRvCQZ5ma44GRnlqS5MU6lUaQ89ojLvNaMldsdjOpt6tWR4AK2Y8zXlmI-Aa-7lswzdiQnvqjMxjLOJzKIxbSxbZtE9SDoB_Cr5vtzG7FcJGZ3DRWSI9_VdzhhSoCfuR51sl20nmogNYMlVWcqN-kvdt9KIUspOjM-hVJMeTNSglLcokyld5fw40V3-K431Q-VVvjIiVtzuuCZr6640UinpH9F7DsDSF3bT1zXH0b5Rdz-Zul_1WhYlTGMN2Lo2kkK8O_uVqLoRs2CACeMIAkhJg9a3I6sso1GCOb7uN2z9uoXvnPJ7b49NLo_dYQZSSTWjIMLuy_PKoX-WGUO_kQOforRs5HXEoGrnxEG9jhlujTeXo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/role/11/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"role",
+								"11",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users API",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzUxMGFmYmM4YmE1MDBmMTIzNGFjYjU4ZDQzNjQ0OGM2NzBlZTMxOWFjYjNhNTk0YTQ0MzVjNWIyMzliODUzY2Q5MTAxOGFlMzgyOGMxY2YiLCJpYXQiOjE2NTI3MDczODEuOTQ4NjU5LCJuYmYiOjE2NTI3MDczODEuOTQ4NjY3LCJleHAiOjE2ODQyNDMzODEuNzE5MDcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.L3q7hl_CHk5lqmcXTWmdmD_uBcTr3dWClJCd9nDaPWLcT6Ez15r5FqRk1uXCxm_a-Tb5nMyeJfVoBGqMH02rPZnG5XYo-dVGbW6wg7kWa94R-G_fDcopQRS6rLrIp0dhMXdGw-DUOOEHraH4d6sLX2ebVc-0c-kwZyczdaxBzplNDzKG100G-6n_Ew3alWHBO_fj9Fu4x30tWwwoPVnky0LC20IYP2EenizT-k6aFkfu8RyvxEr6970jgejH2j144n0OF6MWKZZt2HeevSAgD5eL7E0LztSC7diaD0itC6hHWmgDBSAdsz-ucO5R_gjaqSXVBBoZT3Gum9iqZ7GWjw4Sn5wnOsu1nvXu1Z7GHXDobdJsNICc2LOhix68l6qs19JxbMy4DZsqkWBFcTLpaYPYVyd4V2k_vPPIO9jFfGEOcb0ARAPnNC7p2FyECfjgFeyZcuVY8Lp3xxmWeGg3mcFnAvAsjNOKzZmqawXLoZiHmxgi5JTbNMAn_iKY1g-r0C2TzvTXeyC7NhGsODLpa5HhmPG5LesetkJrPW4ep5iXXHrpjHT6jQdjEFYkkE5Naq_XgdzXzvN4oYnxmcPhRDbOAMDD3rc3rikheIXFPsmhfb80SJDv-D9jees9OtXez5SuEaZKDd6bVzAxrj32Y4OTVc44TifafS00-1cPjtM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/task/public/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New User Api",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTk4ZDE3ODM1ZjE2MDEyYzBmMjk5N2I4NTJkNzczNGY3YTE3YjVlYzAyNjA5MzJjNzVlYjMyYjQ3YWU5NDM5MTBmNDE2YjA0NDJmYzk2MjMiLCJpYXQiOjE2NTI2MzE3MTguODE0Mzk1LCJuYmYiOjE2NTI2MzE3MTguODE0NDIzLCJleHAiOjE2ODQxNjc3MTguNzY3Njk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WGsV8PqBWT9fKighTNGHoEYo6d5wpia-CrEix_E1V399r-DgvEHfAJOZ55UBG-VvE-sDi91_BoCUHJKsZEWv_z35YnYKAn2ZMyJKPfTAUcF66wzbGbkpIpNC7-Qaw4Sj3Z8KI5___E9mxcTefsaeBuP08iIa-4jOl3wzp799vTyf1OmZ93DJFTAw7jIelOvAZqzGSEYlvBvyF0vn5s_Pmfja6Nt1HNasmtuB_dEz6gwG7xL__PDS3kQxnDZitZYGEWt3ViR9_5znzqTKco5ZRYGouAfn3T0_XF4jMNF_mz_aMMnlan5Cvth-rJsSeZzGrr2y1_Bk7Db4sfDD8SA9HwDyI2lqZIzyNgWmoRUOmYDxiXeb35nfiM0hVmU2R0pTai2xM8dQ8pxe9UUYbvPfLHiaeraRf_2MVMReht35oSY6ZxNNJH4E4E29PGAkTbwIqFz-9-iexCmLhBFPXJAqd1C-I0DqwTJl1Vbd2dIAm5dRabEXwpYZbZr44oH8FUGMLu6X9xyLsnjPccVd_gWFfbqtrJkynlUlNbgUe7BmrFtTvozqGtO5NH6LlCg57SjkbfMWiZ82XMndaxRt9beiIIuffmWnV-RR_tNY5fw8pjF6KmHCrFKzEFlTGDElDn1SVdxrZQL-tFrE7i7WSFFgZR0aiW4OnMb4sRHdyoLDP5Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Anusia Senthooran",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "anusia@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Anusia1234",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Anusia1234",
+									"type": "text"
+								},
+								{
+									"key": "assignees_role",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTk4ZDE3ODM1ZjE2MDEyYzBmMjk5N2I4NTJkNzczNGY3YTE3YjVlYzAyNjA5MzJjNzVlYjMyYjQ3YWU5NDM5MTBmNDE2YjA0NDJmYzk2MjMiLCJpYXQiOjE2NTI2MzE3MTguODE0Mzk1LCJuYmYiOjE2NTI2MzE3MTguODE0NDIzLCJleHAiOjE2ODQxNjc3MTguNzY3Njk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WGsV8PqBWT9fKighTNGHoEYo6d5wpia-CrEix_E1V399r-DgvEHfAJOZ55UBG-VvE-sDi91_BoCUHJKsZEWv_z35YnYKAn2ZMyJKPfTAUcF66wzbGbkpIpNC7-Qaw4Sj3Z8KI5___E9mxcTefsaeBuP08iIa-4jOl3wzp799vTyf1OmZ93DJFTAw7jIelOvAZqzGSEYlvBvyF0vn5s_Pmfja6Nt1HNasmtuB_dEz6gwG7xL__PDS3kQxnDZitZYGEWt3ViR9_5znzqTKco5ZRYGouAfn3T0_XF4jMNF_mz_aMMnlan5Cvth-rJsSeZzGrr2y1_Bk7Db4sfDD8SA9HwDyI2lqZIzyNgWmoRUOmYDxiXeb35nfiM0hVmU2R0pTai2xM8dQ8pxe9UUYbvPfLHiaeraRf_2MVMReht35oSY6ZxNNJH4E4E29PGAkTbwIqFz-9-iexCmLhBFPXJAqd1C-I0DqwTJl1Vbd2dIAm5dRabEXwpYZbZr44oH8FUGMLu6X9xyLsnjPccVd_gWFfbqtrJkynlUlNbgUe7BmrFtTvozqGtO5NH6LlCg57SjkbfMWiZ82XMndaxRt9beiIIuffmWnV-RR_tNY5fw8pjF6KmHCrFKzEFlTGDElDn1SVdxrZQL-tFrE7i7WSFFgZR0aiW4OnMb4sRHdyoLDP5Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Anusia",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Vasan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "assignees_role",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/user/6/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"user",
+								"6",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show User API",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTk4ZDE3ODM1ZjE2MDEyYzBmMjk5N2I4NTJkNzczNGY3YTE3YjVlYzAyNjA5MzJjNzVlYjMyYjQ3YWU5NDM5MTBmNDE2YjA0NDJmYzk2MjMiLCJpYXQiOjE2NTI2MzE3MTguODE0Mzk1LCJuYmYiOjE2NTI2MzE3MTguODE0NDIzLCJleHAiOjE2ODQxNjc3MTguNzY3Njk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WGsV8PqBWT9fKighTNGHoEYo6d5wpia-CrEix_E1V399r-DgvEHfAJOZ55UBG-VvE-sDi91_BoCUHJKsZEWv_z35YnYKAn2ZMyJKPfTAUcF66wzbGbkpIpNC7-Qaw4Sj3Z8KI5___E9mxcTefsaeBuP08iIa-4jOl3wzp799vTyf1OmZ93DJFTAw7jIelOvAZqzGSEYlvBvyF0vn5s_Pmfja6Nt1HNasmtuB_dEz6gwG7xL__PDS3kQxnDZitZYGEWt3ViR9_5znzqTKco5ZRYGouAfn3T0_XF4jMNF_mz_aMMnlan5Cvth-rJsSeZzGrr2y1_Bk7Db4sfDD8SA9HwDyI2lqZIzyNgWmoRUOmYDxiXeb35nfiM0hVmU2R0pTai2xM8dQ8pxe9UUYbvPfLHiaeraRf_2MVMReht35oSY6ZxNNJH4E4E29PGAkTbwIqFz-9-iexCmLhBFPXJAqd1C-I0DqwTJl1Vbd2dIAm5dRabEXwpYZbZr44oH8FUGMLu6X9xyLsnjPccVd_gWFfbqtrJkynlUlNbgUe7BmrFtTvozqGtO5NH6LlCg57SjkbfMWiZ82XMndaxRt9beiIIuffmWnV-RR_tNY5fw8pjF6KmHCrFKzEFlTGDElDn1SVdxrZQL-tFrE7i7WSFFgZR0aiW4OnMb4sRHdyoLDP5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/task/public/api/user/6/show",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"user",
+								"6",
+								"show"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User API",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTk4ZDE3ODM1ZjE2MDEyYzBmMjk5N2I4NTJkNzczNGY3YTE3YjVlYzAyNjA5MzJjNzVlYjMyYjQ3YWU5NDM5MTBmNDE2YjA0NDJmYzk2MjMiLCJpYXQiOjE2NTI2MzE3MTguODE0Mzk1LCJuYmYiOjE2NTI2MzE3MTguODE0NDIzLCJleHAiOjE2ODQxNjc3MTguNzY3Njk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WGsV8PqBWT9fKighTNGHoEYo6d5wpia-CrEix_E1V399r-DgvEHfAJOZ55UBG-VvE-sDi91_BoCUHJKsZEWv_z35YnYKAn2ZMyJKPfTAUcF66wzbGbkpIpNC7-Qaw4Sj3Z8KI5___E9mxcTefsaeBuP08iIa-4jOl3wzp799vTyf1OmZ93DJFTAw7jIelOvAZqzGSEYlvBvyF0vn5s_Pmfja6Nt1HNasmtuB_dEz6gwG7xL__PDS3kQxnDZitZYGEWt3ViR9_5znzqTKco5ZRYGouAfn3T0_XF4jMNF_mz_aMMnlan5Cvth-rJsSeZzGrr2y1_Bk7Db4sfDD8SA9HwDyI2lqZIzyNgWmoRUOmYDxiXeb35nfiM0hVmU2R0pTai2xM8dQ8pxe9UUYbvPfLHiaeraRf_2MVMReht35oSY6ZxNNJH4E4E29PGAkTbwIqFz-9-iexCmLhBFPXJAqd1C-I0DqwTJl1Vbd2dIAm5dRabEXwpYZbZr44oH8FUGMLu6X9xyLsnjPccVd_gWFfbqtrJkynlUlNbgUe7BmrFtTvozqGtO5NH6LlCg57SjkbfMWiZ82XMndaxRt9beiIIuffmWnV-RR_tNY5fw8pjF6KmHCrFKzEFlTGDElDn1SVdxrZQL-tFrE7i7WSFFgZR0aiW4OnMb4sRHdyoLDP5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/task/public/api/user/6/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"user",
+								"6",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "Get User All Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/task/public/api/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Create New Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/post/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - Update The Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/post/7/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post",
+								"7",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/post/7/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post",
+								"7",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Approval",
+			"item": [
+				{
+					"name": "Filter",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/post-approval/filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post-approval",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Approval",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "Testing purpose",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/post-approval/2/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post-approval",
+								"2",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Approval Posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDg3ODAxNWZjMDI4OTAxY2Y1YTEwNjhmMDZhNjc0ZGU1MThiZGE2OWY5NzFiYTg4MjQ4Njk1OGRiODNhZGQzY2MzMjRkM2U5MWJiYmU1OWUiLCJpYXQiOjE2NTYzODk1NTAuNTUzMjg1LCJuYmYiOjE2NTYzODk1NTAuNTUzMjkyLCJleHAiOjE2ODc5MjU1NTAuMzM1MTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.dPd8XdBKVvgG2wr2YxlMpqSfZExGye657M03yPluZJluNP_X06qcQLiHJAHGjcmIlbiGMr5ycV50m6crc7zMNh9LYqUn1e7Hn-alUU8ooByGsuI5I7xMAaj8mWD39cR9Zk1MJWT9qgDHEXRX20GWTflF0_ZgcPiqczPMsNgmPgCWsobETPfFUo12Hy1KYA8Fu6zRdrqKrbnTlWNBV2whLNP0gKUvVuXfNRfXpzVCfqk9r1A2_1j8d9GMtc4Z2MehzVmJl0wii62U56nlD3tIZXLwhiUe1Ow4hfiYoUAZ4U2Brp5IJepHtdMJOeefU5hGlEJlfIP8H_p28GWs9nuq7JmP3Gl79rAjiBaf97LLj9gTRzlECivrr6H1dT57bT7jLSpfWB4VciNLftf-S98hvtzqzPbBxxxv407QGriqYRWwo2-gGZEO81xcZYIglo9imZcSxxrZQz-QjwRDxfldi4BexoWtSvshwDUsr9SdT7Pqb1bSIdLXNIcTPp9N69mBCj2ePaTDgqVysc9lkyCWFyHmlM1jYDO7czMS0uuoOoKfOcGxKiADlw_TItektoH-DYiIs5KGPMD1fD7gHKmJz8mp5NgjWTLfnVqKwvCuwAA37maSqkhN2Ch-19kJPtupQmaaATSsFCADfjb9STRqIrJvORPhPOg4d7i8ttz1vJk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/task/public/api/post-approval",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"task",
+								"public",
+								"api",
+								"post-approval"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@wearedesigners.net",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/task/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"task",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzU2ZmNmMDA5MWQ0MDIxNmYwNWYxMjg5NjgwNDExYzZiYmI0OWU0MTQ5YjQzY2E2M2EwMzc2MDA5YjY4NmQwOWY3ZWJjZDUzMzM0MmQ4NmMiLCJpYXQiOjE2NTI2MDU4MzguNTkyOTYyLCJuYmYiOjE2NTI2MDU4MzguNTkzMDA2LCJleHAiOjE2ODQxNDE4MzguNDg0MDU0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rud5m9wiDquLSzqZEJclzTXt0e7-pdMFGrMBXnQw4wwXLI9PP_3sPLJgCuSmf8hTcy_9Hl9gNBVmtuBV-0WojXfsDQyUQxCa6G68V3aHpOASC5njimVtXBAk01XJEvnizsdlhlmmh0R-raiyLxXINcx9hXXHOQYb9O8Wnx9FCVHYRDNm_Ca7dAsy2uZAQ9ZTuC55MJr7zbGosYG-8eAu-xPm9KS8YHVOuuoWQJdGCYHQpNgws2hG0foEBJ0FjkdSDbc43zAofWbV-tbIst3Q0Yw06vmcryVVXQbuWi8D9I1a4ztNG5aYAh3mESIfPINVAzQUQ6lsACZALaBGaFtOoQdiLVLvpRGobghTLsI8Sk9lHD-O2ZL0NS_rL7xw1Qz-RuKhxCaG2b9n-1-RvCj8lOJTf4vtNPWQAwljJRIkf2qMsSlTIVPulq1JBeo3dbOT_CXddNuFOOQhu_Q-QVRs7Y4IiDJsuSSptAH1QPAp0dPVUd5HwDSNe9elLMXXUDaxzdh3D1GEsNdJfFCsuRtE9u64TjnWFcLwjl1q9evN-IwjndTD_7oEqbG92IiMwW6GVfX0SeyYeIIk6LSkBnS-6HvAUWxKu_55VUa6yOfBBu8WJ4sGBFesoGZLzWmT4scgT1XNjAyv10v6qEtT2gFzGx8qhxjeuOdEoyED6TRSLIs",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzU2ZmNmMDA5MWQ0MDIxNmYwNWYxMjg5NjgwNDExYzZiYmI0OWU0MTQ5YjQzY2E2M2EwMzc2MDA5YjY4NmQwOWY3ZWJjZDUzMzM0MmQ4NmMiLCJpYXQiOjE2NTI2MDU4MzguNTkyOTYyLCJuYmYiOjE2NTI2MDU4MzguNTkzMDA2LCJleHAiOjE2ODQxNDE4MzguNDg0MDU0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rud5m9wiDquLSzqZEJclzTXt0e7-pdMFGrMBXnQw4wwXLI9PP_3sPLJgCuSmf8hTcy_9Hl9gNBVmtuBV-0WojXfsDQyUQxCa6G68V3aHpOASC5njimVtXBAk01XJEvnizsdlhlmmh0R-raiyLxXINcx9hXXHOQYb9O8Wnx9FCVHYRDNm_Ca7dAsy2uZAQ9ZTuC55MJr7zbGosYG-8eAu-xPm9KS8YHVOuuoWQJdGCYHQpNgws2hG0foEBJ0FjkdSDbc43zAofWbV-tbIst3Q0Yw06vmcryVVXQbuWi8D9I1a4ztNG5aYAh3mESIfPINVAzQUQ6lsACZALaBGaFtOoQdiLVLvpRGobghTLsI8Sk9lHD-O2ZL0NS_rL7xw1Qz-RuKhxCaG2b9n-1-RvCj8lOJTf4vtNPWQAwljJRIkf2qMsSlTIVPulq1JBeo3dbOT_CXddNuFOOQhu_Q-QVRs7Y4IiDJsuSSptAH1QPAp0dPVUd5HwDSNe9elLMXXUDaxzdh3D1GEsNdJfFCsuRtE9u64TjnWFcLwjl1q9evN-IwjndTD_7oEqbG92IiMwW6GVfX0SeyYeIIk6LSkBnS-6HvAUWxKu_55VUa6yOfBBu8WJ4sGBFesoGZLzWmT4scgT1XNjAyv10v6qEtT2gFzGx8qhxjeuOdEoyED6TRSLIs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/task/public/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"task",
+						"public",
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
